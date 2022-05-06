@@ -1,0 +1,35 @@
+body{
+    margin-top:5%;margin-left: 35%;margin-right: 35%;
+}
+#calc_container{
+    width: 400px;
+    height: 600px;
+    border: 2px solid black;
+    display: flex;
+    flex-wrap: wrap;
+}
+#display_container{
+    margin-left: 2.5%;margin-top: 5px;
+    width: 380px;
+    height: 100px;
+    border: 1px gray solid;
+    text-align: right;
+    position: relative;    
+}
+#display{
+    font-size: xx-large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: absolute;
+    bottom:1%; right: 0%;
+}
+#history{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.buttons{
+    margin-left: 10px;margin-top: 5px;
+    width: 82px;
+    height: 82px;
+    background-color: darkgrey;
+    font-weight: bold;
+
+}
