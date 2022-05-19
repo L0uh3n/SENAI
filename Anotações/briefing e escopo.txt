@@ -1,0 +1,17 @@
+briefing: 
+
+> prazo: data de entrega
+> publico alvo: aceitação
+> objetivo do projeto: a meta que almeja atingir (ja disse um grande sábio chamado thiago: "se der certo, todo mundo vai querer")
+> conceito, imagem e aparencia: tem que estar totalmente ligado a tematica da empresa (identidade)
+> meios de acesso: em qual plataforma vai utilizar, como vai ser utilizado (otimização)
+
+escopo:
+
+> anotar tudo, definição do projeto.
+
+- projeções
+- dados necessários
+- estimativas
+- atividades
+- etapas

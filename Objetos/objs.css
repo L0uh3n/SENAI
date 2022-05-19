@@ -9,18 +9,30 @@ body {
     padding: 5px 5px;
 }
 
+#container{
+    display: block;
+    width: 300px;
+    height: 300px;
+}
+
+.square{
+    width: 30px;
+    height: 30px;
+}
+
 fieldset {
     padding: 5px 10px;
 }
 
-.content {
-    width: 100%;
-    padding: 10px 0;
-    border: 1px solid white;
-
+.buttons {
     display: flex;
-    justify-content: center;
     align-items: center;
-    flex-direction: column;
-    
+}
+
+#registro{
+    margin-top: 20px;
+    display: flex;
+    block-size: 10px;
+    width: 300px;
+    height: 100px;
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,22 +8,37 @@
     <link rel="stylesheet" href="objs.css">
     <title>Dormir não da XP</title>
 </head>
+
 <body>
     <fieldset>
-        <input type="text" id="usuario" placeholder="Usuário"/>
-        <input type="password" id="senha" placeholder="Senha"/>
-        <input type="email" id="email" placeholder="Email"/>
+        <input type="text" id="usuario" placeholder="Usuário" />
+        <input type="password" id="senha" placeholder="Senha" />
+        <input type="text" id="email" placeholder="Email" />
         <button id="cadastrar" onclick="cadastrar()">CADASTRAR</button>
+        <button id="editar" onclick="editar(event)">EDITAR</button>
     </fieldset>
-    
-    <div class="buttons" id="buttons">
-        <button id="left" onclick="back()">VOLTAR</button>
-        <span id="display">0</span>
-        <button id="right" onclick="next()">PRÓXIMO</button>
-    </div>
 
-    <div class="content" id="content"></div></div>
+    <div id="container">
+        <div id="registro">
+            <div class="side">
+                <span class="label">Usuário</span>
+                <span class="label">Password</span>
+                <span class="label">Email</span>
+            </div>
+            <div class="side">
+                <input class="campo" disabled type="text" />
+                <input class="campo" disabled type="text" />
+                <input class="campo" disabled type="text" />
+            </div>
+
+        </div>
+        <div id="footer">
+            <button id="left" onclick="preenche(event)">VOLTAR</button>
+            <span id="atual">0</span>
+            <button id="right" onclick="preenche(event)">PRÓXIMO</button>
+        </div>
 
 </body>
 <script src="objs.js"></script>
+
 </html>

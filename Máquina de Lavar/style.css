@@ -1,0 +1,7 @@
+#registro{
+    margin-top: 20px;
+    display: flex;
+    block-size: 10px;
+    width: 300px;
+    height: 100px;
+}
