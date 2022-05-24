@@ -5,6 +5,7 @@ var formas = 1
 var lista1 = []
 var lista2 = []
 var lista3 = []
+var vetor = []
 
 
 //options é um vetor com as opcoes listadas. selected index = indice selecionado. é possivel informar o indice manualmente ou utilizando um contador.
@@ -23,7 +24,7 @@ function selecao() {
     */
     if (opcao == "juncao_de_listas") {
         resultado.innerHTML = ""
-        for (cont = 0; cont < input; cont++) {
+        for (let cont = 0; cont < input; cont++) {
             lista1[cont] = (Math.floor(Math.random() * 100))
             lista2[cont] = (Math.floor(Math.random() * 100))
             lista3 = lista1.concat(lista2)
@@ -37,26 +38,17 @@ function selecao() {
     - crie um vetor de tamanho definido pelo usuário. Popule o vetor com numeros aleatórios entre 0-99.
     - Crie uma função que verifique se o número que definiu o tamanho do vetor existe dentro dele(do próprio vetor). a função deve retornar se o número foi encontrado e qual em qual posição
      */
-    if (opcao == "Procura_numero") {
+    if (opcao == "procura_numero") {
         resultado.innerHTML = ""
-        var vetor = []
 
         for (let cont = 0; cont < input; cont++) {
             vetor[cont] = (Math.floor(Math.random() * 10));
-        }
-
-        // for (c in vetor) {
-        //     if (vetor[c].input == input.value) {
-        //         resultado.innerHTML = "Vetor: " + vetor + "<br>" + "O número que você digitou está no vetor"
-        //     } else {
-        //         resultado.innerHTML = "Vetor: " + vetor + "<br>" + "O número que você digitou não está no vetor"
-        //     }
-        // }0
-        for (let index = 0; index < vetor.length; index++) {
-            if (input == vetor[index]) {
-                resultado.innerHTML = "Vetor: " + vetor + "<br>" + "O número que você digitou está no vetor"
-            } else {
-                resultado.innerHTML = "Vetor: " + vetor + "<br>" + "O número que você digitou não está no vetor"
+            for (c in vetor) {
+                if (vetor[c] == input) {
+                    resultado.innerHTML = "Vetor: " + vetor + "<br>" + "O número que você digitou está no vetor"
+                } else if (vetor[c] != input) {
+                    resultado.innerHTML = "Vetor: " + vetor + "<br>" + "O número que você digitou não está no vetor"
+                }
             }
         }
     }
@@ -69,7 +61,7 @@ function selecao() {
     Dica: crie novas divs com a propriedade innerHTML.
     Utilize as classes quadrado,circulo,triangulo para formatar a div adequadamente.
      */
-    if (opcao == "Cria_simbolos") {
+    if (opcao == "cria_simbolos") {
         resultado.innerHTML = " "
 
         for (let cont = 0; cont < parseInt(input); cont++) {
@@ -93,10 +85,30 @@ function selecao() {
 
     /* 4# mostra hora
     - crie uma função que mostre a hora em tempo real na tela.
-    a função também deve receber um valor informado pelo usuário que correspodenrá a uma diferença de horas. 
+    a função também deve receber um valor informado pelo usuário que corresponderá a uma diferença de horas. 
     EX: usuário digitou -4. hora atual 13:23:23 e 9:23:23.
     */
-    if (opcao == "mostra_hora")
+    if (opcao == "mostra_hora") {
+        resultado.innerHTML = " "
+        
+        input = parseInt(input)
+        
+        function add_zero(i) {
+            if (i < 10) {
+                i = "0" + i
+            } return i;
+          }
+          
+          const data = new Date();
+          let hours = add_zero(data.getHours());
+          let minutes = add_zero(data.getMinutes());
+          let seconds = add_zero(data.getSeconds());
+
+          let time = hours + ":" + minutes + ":" + seconds;
+          let time2 = (hours + input) + ":" + minutes + ":" + seconds;
+
+          resultado.innerHTML = "Hora atual: " + time + " e " + time2
+    }
 
         /* 5# Dado um numero inteiro de 1 até 3999. crie um função que Converta esse numero para algarismo romano.
         Premissas:
@@ -114,6 +126,6 @@ function selecao() {
         C pode vir antes de D(500) e M(1000)) formando o número 400 e 900.
         
          */
-        if (opcao == "Numeral_Romano")
+        if (opcao == "numeral_Romano")
             return selecao
 } 
