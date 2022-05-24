@@ -1,4 +1,5 @@
 // Como utilizar um select
+
 var select = document.getElementById("funcao")
 var resultado = document.getElementById("resultado")
 var formas = 1
@@ -8,12 +9,11 @@ var lista3 = []
 var vetor = []
 
 
-//options é um vetor com as opcoes listadas. selected index = indice selecionado. é possivel informar o indice manualmente ou utilizando um contador.
+//options é um vetor com as opcoes listadas. selected index = índice selecionado. é possível informar o índice manualmente ou utilizando um contador.
+
 function selecao() {
     var opcao = select.options[select.selectedIndex].value
     let input = document.getElementById("input").value;
-
-
 
     /* 1# junção de listas
     - crie e preencha dois vetores com numeros de 0-99. a quantidade de valores desses vetores deve ser definida pelo usuario. Use o mesmo valor para ambos os vetores.
@@ -22,8 +22,9 @@ function selecao() {
     DICA: se preferir pode usar o método <arrayname>.sort()
     onde <arrayname>= nome da seu vetor.
     */
+
     if (opcao == "juncao_de_listas") {
-        resultado.innerHTML = ""
+        resultado.innerHTML = " "
         for (let cont = 0; cont < input; cont++) {
             lista1[cont] = (Math.floor(Math.random() * 100))
             lista2[cont] = (Math.floor(Math.random() * 100))
@@ -33,23 +34,32 @@ function selecao() {
 
     }
 
-
     /* 2# Procura numero
     - crie um vetor de tamanho definido pelo usuário. Popule o vetor com numeros aleatórios entre 0-99.
     - Crie uma função que verifique se o número que definiu o tamanho do vetor existe dentro dele(do próprio vetor). a função deve retornar se o número foi encontrado e qual em qual posição
      */
+
     if (opcao == "procura_numero") {
-        resultado.innerHTML = ""
+        resultado.innerHTML = " "
 
         for (let cont = 0; cont < input; cont++) {
-            vetor[cont] = (Math.floor(Math.random() * 10));
-            for (c in vetor) {
-                if (vetor[c] == input) {
-                    resultado.innerHTML = "Vetor: " + vetor + "<br>" + "O número que você digitou está no vetor"
-                } else if (vetor[c] != input) {
-                    resultado.innerHTML = "Vetor: " + vetor + "<br>" + "O número que você digitou não está no vetor"
-                }
-            }
+            vetor[cont] = (Math.floor(Math.random() * 100));
+            
+            // for (cont2 = 0; cont2 < vetor.length; cont2++) {
+            //     if (vetor[cont2] == input) {
+            //         resultado.innerHTML = "Vetor: " + vetor + "<br>" + "O número que você digitou está no vetor"
+            //     } else {
+            //         resultado.innerHTML = "Vetor: " + vetor + "<br>" + "O número que você digitou não está no vetor"
+            //     }
+            // }
+
+            // for (c in vetor) {
+            //     if (vetor[c] == input) {
+            //         resultado.innerHTML = "Vetor: " + vetor + "<br>" + "O número que você digitou está no vetor"
+            //     } else {
+            //         resultado.innerHTML = "Vetor: " + vetor + "<br>" + "O número que você digitou não está no vetor"
+            //     }
+            // }
         }
     }
 
@@ -61,6 +71,7 @@ function selecao() {
     Dica: crie novas divs com a propriedade innerHTML.
     Utilize as classes quadrado,circulo,triangulo para formatar a div adequadamente.
      */
+
     if (opcao == "cria_simbolos") {
         resultado.innerHTML = " "
 
@@ -82,12 +93,12 @@ function selecao() {
         }
     }
 
-
     /* 4# mostra hora
     - crie uma função que mostre a hora em tempo real na tela.
     a função também deve receber um valor informado pelo usuário que corresponderá a uma diferença de horas. 
     EX: usuário digitou -4. hora atual 13:23:23 e 9:23:23.
     */
+
     if (opcao == "mostra_hora") {
         resultado.innerHTML = " "
         
@@ -126,6 +137,7 @@ function selecao() {
         C pode vir antes de D(500) e M(1000)) formando o número 400 e 900.
         
          */
+
         if (opcao == "numeral_Romano")
             return selecao
 } 
