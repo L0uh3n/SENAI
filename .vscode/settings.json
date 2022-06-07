@@ -14,6 +14,7 @@
         "posicao",
         "selecao",
         "semaforo",
-        "simbolos"
+        "simbolos",
+        "tankam"
     ]
 }
